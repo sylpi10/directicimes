@@ -2,21 +2,20 @@
 
 namespace App\Controller;
 
-use App\Entity\Contact;
 use App\Form\ContactType;
 use App\Notification\ContactNotification;
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-class GlobalController extends AbstractController
+class AboutController extends AbstractController
 {
     /**
-     * @Route("/", name="home")
+     * @Route("/about", name="about")
      */
-    public function index(Request $request, ContactNotification $notification, MailerInterface $mailer) 
+    public function about(Request $request, ContactNotification $notification, MailerInterface $mailer) 
     {
         //  = new Contact();
         $form = $this->createForm(ContactType::class);
@@ -39,10 +38,10 @@ class GlobalController extends AbstractController
             // $notification->notify($contact);
 
             $this->addFlash('success', "Your email has been send !!");
-            return $this->redirectToRoute("home");
+            return $this->redirectToRoute("about");
         }
 
-        return $this->render('global/index.html.twig', [
+        return $this->render('about/about.html.twig', [
             'form' => $form->createView()
         ]);
     }

@@ -2,9 +2,15 @@
 
 {% block title %}Mountain guide{% endblock %}
 
+
 {% block body %}
+
+
 <h1 class="main-title">Alpinism, Ski, Climbing</h1>
-<button class="btn btn-info more-link">More</button>
+
+
+
+<a href="#main-section" class="btn more-link button-link">Start</a>
 <div class="slider-wrapper">    
 
    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -32,7 +38,13 @@
 {# end hero #}
 
 
-<main class="container mt-3 ">
+<a href="#top" id="main-section">
+  <i class="far fa-arrow-alt-circle-up back-top"></i>
+</a>
+
+<hr class="bg-white my-5" id="">
+
+<main class="container mt-3">
 
     {# // alpinism section #}
     <div class="row my-5">
@@ -131,7 +143,6 @@
           </div>
         </div>
       </div>
-  </div>    
 
   <hr>
       
@@ -163,4 +174,15 @@
   </div>
 
 </main>
+
+<hr>
+
+<div class="contact container my-5" id="contact-form">
+  {% include "contact.html.twig" %}
+</div>
+
+<div class="footer mt-5 bg-dark">
+  <h5 class="text-light p-5">footer</h5>
+</div>
+
 {% endblock %}

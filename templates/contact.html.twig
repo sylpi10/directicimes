@@ -1,0 +1,12 @@
+<h1 class="my-4">Contact</h1>
+
+<div class="index-notif">
+    {% for msg in app.flashes('success') %}
+      <p class="alert-success alert w-50">{{msg}}</p>
+    {% endfor %}
+  </div>
+
+  {{form_start(form)}}
+    {{form_widget(form)}}
+    <input type="submit" value="Send" class="btn button-link">
+  {{form_end(form)}}

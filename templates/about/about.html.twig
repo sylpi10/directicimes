@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AboutController!{% endblock %}
+
+{% block body %}
+
+    <main class="container about-container">
+            <div class="about-text">
+                <h1>About me</h1>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus ut itaque animi doloremque deleniti et fuga perferendis? Nostrum culpa minima totam doloribus odio, laboriosam dolor. Quia culpa repellendus dolorem ipsam.
+                </p>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus ut itaque animi doloremque deleniti et fuga perferendis? Nostrum culpa minima totam doloribus odio, laboriosam dolor. Quia culpa repellendus dolorem ipsam.
+                </p>
+            </div>
+            <div class="about-pic">
+                <img src="{{asset('images/about-me.jpg')}}" alt="Person picture" class="img-fluid" width="600">
+            </div>
+            
+            
+        </main>
+        <hr class="my-5 w-50 mx-auto">
+
+
+    <div class="contact container my-5" id="contact-form">
+        {% include "contact.html.twig" %}
+      </div>
+
+{% endblock %}
