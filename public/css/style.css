@@ -1,0 +1,49 @@
+.slider-wrapper{
+    height: 100vh;
+    /* margin-top: 0; */
+}
+.slider-wrapper .carousel-inner{
+    height: 100vh;
+}
+h1, h2 {
+    font-family: Share Tech,sans-serif;
+}
+.main-title, .more-link{
+    position: absolute;
+    
+    z-index: 999;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 500px;
+}
+.main-title{
+    margin-top: 12%;
+    text-align: center;
+}
+
+.more-link{
+    margin-top: 36%;
+    width: 100px;
+}
+
+
+main .carousel-inner{
+    height: 440px;
+}
+/* i{
+    font-size: 2rem;
+    position: absolute;
+    margin-left: 20%;
+    margin-top: 10px;
+    z-index: 999;   
+    color: #6495ed;
+    transition: transform .5s ease;
+}
+i:hover{
+    transform:scale(1.1);
+    cursor: pointer;
+    color:#5183e0; 
+} */
+
