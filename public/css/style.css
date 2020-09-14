@@ -9,6 +9,7 @@ nav ul li a{
     text-transform: uppercase;
     color:#fff !important;
     border-bottom: solid 1px transparent;
+    font-weight: 300 !important;
 }
 
 nav ul li a:hover{
@@ -153,9 +154,19 @@ h2{
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.about-text{
-    width: 40%;
+
+.about-container div{
+    min-width: 300px;
 }
+
+@media screen and (max-width: 990px) {
+    .about-container div{
+        min-width: 100%;
+    }
+}
+/* .about-text{
+    width: 30%;
+} */
 
 
 
