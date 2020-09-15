@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Album{% endblock %}
+
+{% block body %}
+
+    <div class="container mt-5 pt-5">
+
+        
+        <h1>Create new Album</h1>
+        
+        {{ include('album/_form.html.twig') }}
+
+        {# {% for pic in album.images %}
+            <p>{{pic.name}}</p>
+            
+        {% endfor %} #}
+        
+        <a href="{{ path('album_index') }}" class="btn btn-info mt-5">back to list</a>
+    </div>
+{% endblock %}
