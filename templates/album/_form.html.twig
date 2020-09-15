@@ -9,7 +9,8 @@
             {% for img in album.images %}
             <div class="m-4 border p-2">
                 <img src="{{asset('uploads/' ~ img.name)}}" alt="" class="" width="130">
-                <a href="{{path('delete_img', {'id': img.id})}}" data-delete data-token="{{csrf_token('delete' ~ img.id)}}">
+                <a href="{{path('delete_img', {'id': img.id})}}" 
+                   data-delete data-token="{{csrf_token('delete' ~ img.id)}}">
                     Remove
                 </a>
             </div>

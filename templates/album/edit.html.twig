@@ -4,17 +4,16 @@
 
 {% block body %}
 <div class="container mt-5 pt-5">
+    <a href="{{ path('album_index') }}" class="btn btn-info my-4">back to list</a>
 
     <h1>Edit Album</h1>
     
     {{ include('album/_form.html.twig', {'button_label': 'Update'}) }}
     
-    <a href="{{ path('album_index') }}" class="btn btn-info my-4">back to list</a>
-    
     {{ include('album/_delete_form.html.twig') }}
 </div>
 {% endblock %}
 
-{% block javascript %}
-    <script src="{{asset('js/images.js')}}"></script>
+{% block javascripts %}
+    <script src="{{asset('script/images.js')}}"></script>
 {% endblock %}
