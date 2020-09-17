@@ -12,6 +12,7 @@
     {% for album in albums %}
         <div class="album-container border mb-4 p-2">
             <h2>{{album.title}}</h2>
+            <p class="text-secondary"><i class="fas fa-calendar-alt"></i> {{ album.date|date("m/d/Y", "Europe/Paris")}}, <i class="fas fa-map-marker-alt"></i> {{album.location}}</p>
             <p>{{album.content}}</p>
 
             
