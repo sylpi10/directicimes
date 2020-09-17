@@ -54,29 +54,29 @@ class GlobalController extends AbstractController
         ]);
     }
 
-    //   /**
-    //  * @Route("/register", name="register")
-    //  */
-    // public function register(Request $request, EntityManagerInterface $manager, UserPasswordEncoderInterface $encoder) 
-    // {
-    //     $user = new User();
+      /**
+     * @Route("/register", name="register")
+     */
+    public function register(Request $request, EntityManagerInterface $manager, UserPasswordEncoderInterface $encoder) 
+    {
+        $user = new User();
 
-    //     $form = $this->createForm(RegisterType::class, $user);
-    //     $form->handleRequest($request);
+        $form = $this->createForm(RegisterType::class, $user);
+        $form->handleRequest($request);
 
-    //     if ($form->isSubmitted() && $form->isValid()) {
-    //         $passWrdCrypt = $encoder->encodePassword($user, $user->getPassword());
-    //         $user->setPassword($passWrdCrypt);
-    //         $user->setRoles("ROLE_ADMIN");
-    //        $manager->persist($user);
-    //        $manager->flush();
-    //     }
+        if ($form->isSubmitted() && $form->isValid()) {
+            $passWrdCrypt = $encoder->encodePassword($user, $user->getPassword());
+            $user->setPassword($passWrdCrypt);
+            $user->setRoles("ROLE_ADMIN");
+           $manager->persist($user);
+           $manager->flush();
+        }
 
-    //     return $this->render('global/register.html.twig', [
-    //         'user' => $user,
-    //         'form' => $form->createView()
-    //     ]);
-    // }
+        return $this->render('global/register.html.twig', [
+            'user' => $user,
+            'form' => $form->createView()
+        ]);
+    }
 
      /**
      * @Route("/login", name="login")
