@@ -7,6 +7,11 @@
   </div>
 
   {{form_start(form)}}
-    {{form_widget(form)}}
-    <input type="submit" value="Send" class="btn button-link">
+  <label class="control-label" for="">{% trans %} Your Name {% endtrans %}</label>
+  {{form_row(form.name, {'attr':{'placeholder': 'ex:Mike Horn'}})}}
+  <label class="control-label" for="">{% trans %} Your Email {% endtrans %}</label>
+  {{form_row(form.email, {'attr':{'placeholder': 'mail@gmail.com'}})}}
+  <label class="control-label" for="">{% trans %} Your Message {% endtrans %}</label>
+    {{form_row(form.message)}}
+    <input type="submit" value="{% trans %} Send {% endtrans %}" class="btn button-link">
   {{form_end(form)}}

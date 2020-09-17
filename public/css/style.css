@@ -104,6 +104,9 @@ h2{
 .more-link{
     margin-top: 40%;
 }
+.more-link i {
+    font-size: 1.7rem;
+}
 
 .button-link{
     width: 100px;
@@ -168,5 +171,14 @@ h2{
     width: 30%;
 } */
 
-
-
+/*photos albums*/
+.albums-wrapper{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.album-container{
+    width: 48%;
+}

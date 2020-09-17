@@ -1,16 +1,16 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Mountain guide{% endblock %}
+{% block title %} {% trans %} Mountain guide {% endtrans %} {% endblock %}
 
 
 {% block body %}
 
 
-<h1 class="main-title">Alpinism, Ski, Climbing</h1>
+<h1 class="main-title">{% trans %} Alpinism, Ski, Climbing {% endtrans %} </h1>
 
 
 
-<a href="{{path('home', {'_fragment':'main-section'})}}" class="btn more-link button-link">Start</a>
+<a href="{{path('home', {'_fragment':'main-section'})}}" class="btn more-link button-link"><i class="fas fa-angle-down"></i></a>
 
 <div class="slider-wrapper">    
 
@@ -25,11 +25,11 @@
     </div>
     <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
+      <span class="sr-only">{% trans %} Previous {% endtrans %}</span>
     </a>
     <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
+      <span class="sr-only">{% trans %} Next {% endtrans %}</span>
     </a>
   </div>
 </div>
@@ -45,32 +45,32 @@
     {# // alpinism section #}
     <div class="row my-5 main-section">
         <div class="col-4">
-            <h2>Alpinism</h2>
+            <h2>{% trans %} Alpinism {% endtrans %}</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos voluptates provident molestias dolore blanditiis iusto omnis commodi nemo officia. Ratione voluptatem aperiam impedit nobis dicta numquam sequi iste quo fuga.</p>
         </div>
         <div class="col-8">
           <div id="carouselAlpi" class="carousel slide carousel-fade" data-ride="carousel">
             <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="{{asset('images/alpi/alpi1.jpg')}}" class="d-block w-100" alt="...">
+                <img src="{{asset('images/alpi/alpi1.jpg')}}" class="d-block w-100" alt="Image">
             </div>
             <div class="carousel-item">
-                <img src="{{asset('images/alpi/alpi2.jpg')}}" class="d-block w-100" alt="...">
+                <img src="{{asset('images/alpi/alpi2.jpg')}}" class="d-block w-100" alt="Image">
             </div>
             <div class="carousel-item">
-                <img src="{{asset('images/alpi/alpi3.jpg')}}" class="d-block w-100" alt="...">
+                <img src="{{asset('images/alpi/alpi3.jpg')}}" class="d-block w-100" alt="Image">
             </div>
-            </div>
+          </div>
             <a class="carousel-control-prev" href="#carouselAlpi" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
+            <span class="sr-only">{% trans %} Previous {% endtrans %}</span>
             </a>
             <a class="carousel-control-next" href="#carouselAlpi" role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
+            <span class="sr-only">{% trans %} Next {% endtrans %}</span>
             </a>
       </div>
-        </div>
+      </div>
     </div>    
 
     <hr>
@@ -81,28 +81,28 @@
           <div id="carouselClimb" class="carousel slide carousel-fade" data-ride="carousel">
             <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="{{asset('images/climb/climb1.jpg')}}" class="d-block w-100" alt="...">
+                <img src="{{asset('images/climb/climb1.jpg')}}" class="d-block w-100" alt="Image">
             </div>
             <div class="carousel-item">
-                <img src="{{asset('images/climb/climb2.jpg')}}" class="d-block w-100" alt="...">
+                <img src="{{asset('images/climb/climb2.jpg')}}" class="d-block w-100" alt="Image">
             </div>
             <div class="carousel-item">
-                <img src="{{asset('images/climb/climb3.jpg')}}" class="d-block w-100" alt="...">
+                <img src="{{asset('images/climb/climb3.jpg')}}" class="d-block w-100" alt="Image">
             </div>
             </div>
             <a class="carousel-control-prev" href="#carouselClimb" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
+            <span class="sr-only">{% trans %} Previous {% endtrans %}</span>
             </a>
             <a class="carousel-control-next" href="#carouselClimb" role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
+            <span class="sr-only">{% trans %} Next {% endtrans %}</span>
             </a>
         </div>
       </div>
 
         <div class="col-4">
-            <h2>Climbing</h2>
+            <h2>{% trans %} Clilbing {% endtrans %}</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos voluptates provident molestias dolore blanditiis iusto omnis commodi nemo officia. Ratione voluptatem aperiam impedit nobis dicta numquam sequi iste quo fuga.</p>
         </div>
     </div>
@@ -112,7 +112,7 @@
      {# // ski section #}
      <div class="row my-5 main-section">
       <div class="col-4">
-          <h2>Ski</h2>
+          <h2>{% trans %} Ski {% endtrans %}</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos voluptates provident molestias dolore blanditiis iusto omnis commodi nemo officia. Ratione voluptatem aperiam impedit nobis dicta numquam sequi iste quo fuga.</p>
       </div>
           <div class="col-8">
@@ -130,11 +130,11 @@
               </div>
               <a class="carousel-control-prev" href="#carouselSki" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
+              <span class="sr-only">{% trans %} Previous {% endtrans %}</span>
               </a>
               <a class="carousel-control-next" href="#carouselSki" role="button" data-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
+              <span class="sr-only">{% trans %} Next {% endtrans %}</span>
               </a>
           </div>
         </div>
@@ -148,23 +148,23 @@
         <div id="carouselSki" class="carousel slide carousel-fade" data-ride="carousel">
           <div class="carousel-inner">
           <div class="carousel-item active">
-              <img src="{{asset('images/ice/ice1.jpg')}}" class="d-block w-100" alt="...">
+              <img src="{{asset('images/ice/ice1.jpg')}}" class="d-block w-100" alt="Image">
           </div>
         
           </div>
-          <a class="carousel-control-prev" href="#carouselSki" role="button" data-slide="prev">
+          <a class="carousel-control-prev" href="#carouselSki" role="button" data-slide="Image">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
+          <span class="sr-only">{% trans %} Previous {% endtrans %}</span>
           </a>
-          <a class="carousel-control-next" href="#carouselSki" role="button" data-slide="next">
+          <a class="carousel-control-next" href="#carouselSki" role="button" data-slide="Image">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
+          <span class="sr-only">{% trans %} Next {% endtrans %}</span>
           </a>
       </div>
     </div>
 
       <div class="col-4">
-          <h2>Ice Climbing</h2>
+          <h2>{% trans %} Ice Climbing {% endtrans %}</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos voluptates provident molestias dolore blanditiis iusto omnis commodi nemo officia. Ratione voluptatem aperiam impedit nobis dicta numquam sequi iste quo fuga.</p>
       </div>
   </div>

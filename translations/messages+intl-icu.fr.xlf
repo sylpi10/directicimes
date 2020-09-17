@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="fr" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id=".oieBhI" resname="Your email has been send">
+        <source>Your email has been send</source>
+        <target>Votre message a bien été envoyé :-)</target>
+      </trans-unit>
+      <trans-unit id="V3DiU2Q" resname="Mountain guide">
+        <source>Mountain guide</source>
+        <target>Guide de Montagne</target>
+      </trans-unit>
+      <trans-unit id="9yk7i14" resname="Alpinism, Ski, Climbing">
+        <source>Alpinism, Ski, Climbing</source>
+        <target>Alpinisme, Ski, Escalade</target>
+      </trans-unit>
+      <trans-unit id="pXsIpIC" resname="Previous">
+        <source>Previous</source>
+        <target>Précédent</target>
+      </trans-unit>
+      <trans-unit id="H.V6Kdf" resname="Next">
+        <source>Next</source>
+        <target>Prochain</target>
+      </trans-unit>
+      <trans-unit id="VqBSMBa" resname="Alpinism">
+        <source>Alpinism</source>
+        <target>Alpinisme</target>
+      </trans-unit>
+      <trans-unit id="U9kq7Z1" resname="Wrong credentials">
+        <source>Wrong credentials</source>
+        <target>__Wrong credentials</target>
+      </trans-unit>
+      <trans-unit id="588_9PF" resname="Password">
+        <source>Password</source>
+        <target>Mot de Passe</target>
+      </trans-unit>
+      <trans-unit id="nWMiwfT" resname="Login">
+        <source>Login</source>
+        <target>Login</target>
+      </trans-unit>
+      <trans-unit id="IHJ7yQq" resname="Clilbing">
+        <source>Clilbing</source>
+        <target>Escalade</target>
+      </trans-unit>
+      <trans-unit id="QYwEF4L" resname="Ski">
+        <source>Ski</source>
+        <target>Ski</target>
+      </trans-unit>
+      <trans-unit id="eytgCbO" resname="Ice Climbing">
+        <source>Ice Climbing</source>
+        <target>Escalade de Glace</target>
+      </trans-unit>
+      <trans-unit id="OnhpU4i" resname="Home">
+        <source>Home</source>
+        <target>Accueil</target>
+      </trans-unit>
+      <trans-unit id="Tvyg0Qx" resname="About">
+        <source>About</source>
+        <target>A Propos</target>
+      </trans-unit>
+      <trans-unit id="0FJ_Sz1" resname="Logout">
+        <source>Logout</source>
+        <target>Déconnexion</target>
+      </trans-unit>
+      <trans-unit id="nQF96xL" resname="Back to Top">
+        <source>Back to Top</source>
+        <target>Haut de Page</target>
+      </trans-unit>
+      <trans-unit id="5LufHs6" resname="Start">
+        <source>Start</source>
+        <target>Commencer</target>
+      </trans-unit>
+      <trans-unit id="9vRoj.I" resname="Send">
+        <source>Send</source>
+        <target>Envoyer</target>
+      </trans-unit>
+      <trans-unit id="YM50cgd" resname="Who Am-I ?">
+        <source>Who Am-I ?</source>
+        <target>Qui Suis-je ?</target>
+      </trans-unit>
+      <trans-unit id="nNJr7k1" resname="Your Name">
+        <source>Your Name</source>
+        <target>Votre Nom</target>
+      </trans-unit>
+      <trans-unit id="IWej4Er" resname="Your Email">
+        <source>Your Email</source>
+        <target>Votre Email</target>
+      </trans-unit>
+      <trans-unit id="tb5dTqr" resname="Your Message">
+        <source>Your Message</source>
+        <target>Votre Message</target>
+      </trans-unit>
+  
+      <trans-unit id="hQVnmnK" resname="Passer en Français">
+        <source>Passer en Français</source>
+        <target>Swith to English</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

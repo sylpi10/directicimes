@@ -5,16 +5,23 @@
 {% block body %}
     <div class="container mt-5 pt-4">
 
-    <h1>Album index</h1>
+    <h1>Welcome Yoann</h1>
 
-    <table class="table">
-        <thead>
+    <hr>
+
+    <h3>Mes Albums</h3>
+    <table class="table mt-4 table-striped">
+        <thead class="thead-dark">
             <tr>
                 <th>Id</th>
-                <th>Title</th>
-                <th>Content</th>
-                <th>pics</th>
-                <th>actions</th>
+                <th>Titre</th>
+                <th>Titre en</th>
+                <th>Date</th>
+                <th>Lieu</th>
+                <th>Description</th>
+                <th>Description en</th>
+                <th>Photos</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -22,15 +29,20 @@
             <tr>
                 <td>{{ album.id }}</td>
                 <td>{{ album.title }}</td>
+                <td>{{ album.englishTitle }}</td>
+                <td>{{ album.date|date("m/d/Y", "Europe/Paris")}}</td>
+                <td>{{ album.location }}</td>
                 <td>{{ album.content }}</td>    
+                <td>{{ album.englishContent }}</td>    
                 <td>
-                    {% for pic in album.images %}
+                    {% for pic in album.images|slice(0, 3) %}
                    <img src="{{asset("uploads/")~ pic.name}}" alt="" width="70">
                     {% endfor %}
+                    ...
                     </td>    
                 <td>
-                    <a href="{{ path('album_show', {'id': album.id}) }}" class="btn btn-success">show</a>
-                    <a href="{{ path('album_edit', {'id': album.id}) }}" class="btn btn-primary">edit</a>
+                    <a href="{{ path('album_show', {'id': album.id}) }}" class="btn btn-success">Détail</a>
+                    <a href="{{ path('album_edit', {'id': album.id}) }}" class="btn btn-primary">Modifier</a>
                 </td>
             </tr>
         {% else %}
@@ -41,6 +53,6 @@
         </tbody>
     </table>
 
-    <a href="{{ path('album_new') }}" class="btn btn-success">Create new</a>
+    <a href="{{ path('album_new') }}" class="btn btn-success"><i class="fas fa-plus-circle mr-2"></i>Créer un nouvel Album</a>
 </div>
 {% endblock %}

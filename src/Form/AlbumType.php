@@ -4,9 +4,10 @@ namespace App\Form;
 
 use App\Entity\Album;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 
 class AlbumType extends AbstractType
 {
@@ -14,7 +15,13 @@ class AlbumType extends AbstractType
     {
         $builder
             ->add('title')
+            ->add('englishTitle')
+            ->add('date', DateType::class, [
+                'widget' => 'single_text'
+            ])
+            ->add('location')
             ->add('content')
+            ->add('englishContent')
             // not linked to db -> mapped = false
             ->add('images', FileType::class, [
                 'label' => false,

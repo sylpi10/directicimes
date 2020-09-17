@@ -13,7 +13,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/album")
+ * @Route("/admin")
  */
 class AlbumController extends AbstractController
 {
@@ -22,7 +22,10 @@ class AlbumController extends AbstractController
      */
     public function index(AlbumRepository $albumRepository): Response
     {
-        return $this->render('album/index.html.twig', [
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+      
+
+        return $this->render('album/index.html.twig', [ 
             'albums' => $albumRepository->findAll(),
         ]);
     }

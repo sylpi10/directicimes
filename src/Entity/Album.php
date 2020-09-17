@@ -34,6 +34,26 @@ class Album
      */
     private $images;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $location;
+
+    /**
+     * @ORM\Column(type="date", nullable=true)
+     */
+    private $date;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $englishTitle;
+
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $englishContent;
+
     public function __construct()
     {
         $this->images = new ArrayCollection();
@@ -95,6 +115,54 @@ class Album
                 $image->setAlbum(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getLocation(): ?string
+    {
+        return $this->location;
+    }
+
+    public function setLocation(?string $location): self
+    {
+        $this->location = $location;
+
+        return $this;
+    }
+
+    public function getDate(): ?\DateTimeInterface
+    {
+        return $this->date;
+    }
+
+    public function setDate(?\DateTimeInterface $date): self
+    {
+        $this->date = $date;
+
+        return $this;
+    }
+
+    public function getEnglishTitle(): ?string
+    {
+        return $this->englishTitle;
+    }
+
+    public function setEnglishTitle(string $englishTitle): self
+    {
+        $this->englishTitle = $englishTitle;
+
+        return $this;
+    }
+
+    public function getEnglishContent(): ?string
+    {
+        return $this->englishContent;
+    }
+
+    public function setEnglishContent(string $englishContent): self
+    {
+        $this->englishContent = $englishContent;
 
         return $this;
     }

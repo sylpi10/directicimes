@@ -6,20 +6,23 @@
 
 <div class="container mt-5 pt-5">
 
-    <h1>Album</h1>
+    <h1>Détails de l'Album: "{{album.title}}"</h1>
 
-    <table class="table">
+    <a href="{{ path('album_index') }}" class="btn btn-info my-3">
+        <i class="fas fa-arrow-circle-left mr-2"></i>Retour à la liste</a>
+
+    <table class="table table-striped">
         <tbody>
             <tr>
                 <th>Id</th>
                 <td>{{ album.id }}</td>
             </tr>
             <tr>
-                <th>Title</th>
+                <th>Titre</th>
                 <td>{{ album.title }}</td>
             </tr>
             <tr>
-                <th>Content</th>
+                <th>Description</th>
                 <td>{{ album.content }}</td>
             </tr>
         </tbody>
@@ -34,12 +37,11 @@
         {% endfor %}
     </div>
 
-    
-    <a href="{{ path('album_edit', {'id': album.id}) }}" class="btn btn-primary">edit</a>
-    
-    {{ include('album/_delete_form.html.twig') }}
+    <div class="row align-items-center">
+        <a href="{{ path('album_edit', {'id': album.id}) }}" class="btn btn-primary mt-3 mr-4">Modifier</a>
 
-    <a href="{{ path('album_index') }}" class="btn btn-info mt-3">back to list</a>
-
+        {{ include('album/_delete_form.html.twig') }}
+    </div>
+    
     </div>
 {% endblock %}
