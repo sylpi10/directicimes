@@ -36,7 +36,7 @@ nav ul li .active{
     height: 100vh;
 }
 .slider-wrapper .carousel .carousel-inner .carousel2{
-    background: url("../images/bg2.jpg") no-repeat bottom right;
+    background: url("../images/bg2.jpg") no-repeat center right;
     background-size: cover;
     height: 100vh;
 }

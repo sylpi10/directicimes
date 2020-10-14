@@ -96,7 +96,7 @@
   
       <trans-unit id="hQVnmnK" resname="Passer en Français">
         <source>Passer en Français</source>
-        <target>Swith to English</target>
+        <target>Switch to English</target>
       </trans-unit>
     </body>
   </file>
