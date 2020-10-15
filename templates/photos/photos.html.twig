@@ -7,13 +7,23 @@
 {% block body %}
 
 <main class="albums-wrapper my-5 pt-5">
-
     
     {% for album in albums %}
-        <div class="album-container border mb-4 p-2">
-            <h2>{{album.title}}</h2>
-            <p class="text-secondary"><i class="fas fa-calendar-alt"></i> {{ album.date|date("m/d/Y", "Europe/Paris")}}, <i class="fas fa-map-marker-alt"></i> {{album.location}}</p>
-            <p>{{album.content}}</p>
+    <div class="album-container border mb-4 p-2">
+        {% for locale in locales %}
+        {% if locale == app.request.locale %}
+        <h2> {{locale}}</h2>
+                {% if locale == "fr" %}
+                    <h2>{{album.title}}</h2>
+                    {% else %}
+                    <h2>{{album.englishTitle}}</h2>
+                {% endif %}
+                <p class="text-secondary"><i class="fas fa-calendar-alt"></i> {{ album.date|date("m/d/Y", "Europe/Paris")}}, <i class="fas fa-map-marker-alt"></i> {{album.location}}</p>
+                {% if locale == "fr" %}
+                <p>{{album.content}}</p>
+                {% else %}
+                <p>{{album.englishContent}}</p>
+            {% endif %}
 
             
                 <div id="{{'carousel'~ album.id}}" class="carousel slide carousel-fade" data-ride="carousel">
@@ -41,6 +51,8 @@
                             <span class="sr-only">Next</span>
                         </a>
                 </div>
+                {% endif %}
+                {% endfor %}
             </div>
         {% endfor %}
 </main>

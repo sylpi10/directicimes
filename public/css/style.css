@@ -110,7 +110,7 @@ h2{
 
 .button-link{
     width: 100px;
-    background-color:rgba(9, 9, 82, .9);
+    background-color:rgba(9, 9, 82, .85);
     color: #fff;   
 }
 .button-link:hover{
@@ -143,6 +143,10 @@ h2{
     min-width: 200px;
 }
 
+.main-section .carousel-inner {
+    height: 400px;
+}
+
 @media screen and (max-width: 770px) {
     .main-section div{
         min-width: 100%;
@@ -173,12 +177,20 @@ h2{
 
 /*photos albums*/
 .albums-wrapper{
-    width: 80%;
+    width: 84%;
     margin: auto;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 .album-container{
-    width: 48%;
+    width: 700px;
+    flex-shrink: 1;
+}
+
+/*admin*/
+.save-or-del-btn{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
