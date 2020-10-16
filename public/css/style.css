@@ -183,9 +183,21 @@ h2{
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.album-container{
-    width: 700px;
-    flex-shrink: 1;
+ .album-container{
+    width: 46%;
+    min-width: 400px;
+    /* flex-shrink: 2; */
+    margin: 20px;
+}
+.albums-wrapper .carousel-inner img{
+    max-height: 400px;
+} 
+
+@media screen and (max-width: 1190px) {
+    .album-container{
+        width: 90%;
+        margin:20px auto;
+    }
 }
 
 /*admin*/
