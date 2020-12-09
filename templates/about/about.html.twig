@@ -5,19 +5,57 @@
 {% block body %}
 
     <main class="container about-container">
-            <div class="about-text col-4">
-                <h1>{% trans %} Who Am-I ? {% endtrans %}</h1>
-                <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus ut itaque animi doloremque deleniti et fuga perferendis? Nostrum culpa minima totam doloribus odio, laboriosam dolor. Quia culpa repellendus dolorem ipsam.
+            <div class="about-me row">
+
+                <div class="about-text col-6">
+                    <h1>{% trans %} Who Am-I ? {% endtrans %}</h1>
+                    <p> 
+                    {% trans %}
+                    Originally from the Yvelynes in the Paris area, I met the mountain on the late in life.
+                    I first tryed it for some week-ends, to escape form the city.
+                    Moutain was to me a place of reckleness where I could let myself go, 
+                    stay focus on what I was doing and completely forget about everyrhing else.
+                    I felt good to come back better in the below world.
+                    My favorite playgrounds were Chamonix and the Ecrins, my mountainous massif of heart, 
+                    from which I live nearby nowadays.
+                    I caught the virus quite fast, from my first outings as an amateur and goups supervision 
+                    for the Alpine club, the willing of becoming a moutain guide was born, to transmit this passion ! 
+                    This is what I do enthusiastically since last summer, I can accompany you in your mountain 
+                    projects, guide you safely and share all these nice emotions up there ! 
+                    {% endtrans %} 
                 </p>
-                <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus ut itaque animi doloremque deleniti et fuga perferendis? Nostrum culpa minima totam doloribus odio, laboriosam dolor. Quia culpa repellendus dolorem ipsam.
-                </p>
+                
             </div>
             <div class="about-pic">
-                <img src="{{asset('images/about-me.jpg')}}" alt="Person picture" class="img-fluid" width="600">
+                <img src="{{asset('images/about-me.jpg')}}" alt="Person picture" class="img-fluid" width="500">
             </div>
+        </div>
+
+            <hr class="m-5">
             
+            <div class="about-me row">
+                <div class="about-pic">
+                    <img src="{{asset('images/about-me3.jpg')}}" alt="Person picture" class="img-fluid" width="500">
+                </div>
+            <div class="about-text col-6">
+                <h2>{% trans %}Why engage a mountain guide ?{% endtrans %}</h2>
+                <p> 
+                {% trans %}
+                    Doing a trip in the mountain, it's living a summary of thrills and spills in a few days:
+                    joy, fear, tiredness, exhilaration in front of this universe's fascinating beauty...
+
+                    It' s also the creation of a unique relation around the rope, where the guide is sesponsible
+                    for your life, where social veneer vanished behind the risk effects, 
+                    the tiredness and the high altitude...
+
+                    However the mountain holds its risks and may fastly become wild.
+                    
+                    With a guide, you will learn to evolve safely in this environment and everybody will 
+                    come back below alive and with the smile ! 
+                {% endtrans %} 
+                </p>   
+            </div>
+            </div>
             
         </main>
         <hr class="my-5 w-50 mx-auto">

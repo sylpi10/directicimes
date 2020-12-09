@@ -133,9 +133,13 @@ h2{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    align-items: center;
 }
 .main-section-second{
     flex-wrap: wrap-reverse;
+}
+.main-section-second h3{
+    font-size: 1.4rem;
 }
 
 .main-section div{
@@ -157,12 +161,18 @@ h2{
 /* //about page */
 .about-container{
     margin-top: 120px;
+}
+.about-container h1, .about-container h2{
+   text-transform: uppercase;
+   font-size: 2rem;
+}
+.about-me{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    width: 100%;
 }
-
-.about-container div{
+.about-me div{
     min-width: 300px;
 }
 

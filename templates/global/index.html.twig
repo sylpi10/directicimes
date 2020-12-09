@@ -35,6 +35,7 @@
 </div>
 {# end hero #}
 
+<!-- // anchor for more link -->
 <div id="main-section"></div>
 
 
@@ -46,7 +47,27 @@
     <div class="row my-5 main-section">
         <div class="col-4">
             <h2>{% trans %} Alpinism {% endtrans %}</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos voluptates provident molestias dolore blanditiis iusto omnis commodi nemo officia. Ratione voluptatem aperiam impedit nobis dicta numquam sequi iste quo fuga.</p>
+            <p>
+              {% trans %}
+              You've never set foot on a glacier or in high mountain et you wish to discover the basics of alpinism ? 
+            {% endtrans %}
+            </p>
+            <p>
+              {% trans %}
+                 You aready have some experience in alpinism and you're looking forward to evolve around more ambitious summit.
+              {% endtrans %}
+            </p>
+            <p>
+              {% trans %}
+                From ice hiking to summit climbing, I garanty you ideals conditions for a first experience in alpinism
+                or for some tougher climbing projects. 
+              {% endtrans %}
+            </p>
+            <p>
+               {% trans %} 
+              From a one day initiation to a full immersion on several days in the moutain and nights in refuges.  
+              {% endtrans %}
+            </p>
         </div>
         <div class="col-8">
           <div id="carouselAlpi" class="carousel slide carousel-fade" data-ride="carousel">
@@ -80,15 +101,15 @@
         <div class="col-8">
           <div id="carouselClimb" class="carousel slide carousel-fade" data-ride="carousel">
             <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="{{asset('images/climb/climb1.jpg')}}" class="d-block w-100" alt="Image">
-            </div>
-            <div class="carousel-item">
-                <img src="{{asset('images/climb/climb2.jpg')}}" class="d-block w-100" alt="Image">
-            </div>
-            <div class="carousel-item">
-                <img src="{{asset('images/climb/climb3.jpg')}}" class="d-block w-100" alt="Image">
-            </div>
+              <div class="carousel-item active">
+                  <img src="{{asset('images/climb/climb1.jpg')}}" class="d-block w-100" alt="Image">
+              </div>
+              <div class="carousel-item">
+                  <img src="{{asset('images/climb/climb2.jpg')}}" class="d-block w-100" alt="Image">
+              </div>
+              <div class="carousel-item">
+                  <img src="{{asset('images/climb/climb3.jpg')}}" class="d-block w-100" alt="Image">
+              </div>
             </div>
             <a class="carousel-control-prev" href="#carouselClimb" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -102,8 +123,80 @@
       </div>
 
         <div class="col-4">
-            <h2>{% trans %} Clilbing {% endtrans %}</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos voluptates provident molestias dolore blanditiis iusto omnis commodi nemo officia. Ratione voluptatem aperiam impedit nobis dicta numquam sequi iste quo fuga.</p>
+
+         <h3>
+          {% trans %}
+            The “Trad”
+          {% endtrans %}
+         </h3>  
+         <p>
+          {% trans %}
+          The "Trad" it's climbing while placing your own gear (friends, wedgers...) in non equiped cliffs.
+          It's a really great training to roam high mountain cliffs.
+          {% endtrans %}
+         </p>
+         <p>
+          {% trans %}
+          If you wish to be ititiated to "trad" climbing, this is what I offer:
+          {% endtrans %}
+        </p>
+        <ul>
+          <li>
+            {% trans %}
+            How to use the climbing gear, to protect yourself: 
+            {% endtrans %}
+          </li>
+          <li>
+            {% trans %}
+            The "trad"s specific gesture: foot, hand wedging, finger lock, wedging in offwidths.
+            {% endtrans %}
+          </li>
+          <li>
+            {% trans %}
+            How to evolve safely (relays making, triangulation ... ) 
+            {% endtrans %}
+          </li>
+        </ul>
+          <p>
+            {% trans %}
+             Where ? Annot in the Hautes Provences Alps, Chamonix, Val d'Orco (the little Italian Yosemite)
+          {% endtrans %}
+        </p>
+
+        </div>
+        <div class="high-cliff pl-3 w-75 mr-auto">
+          <h2>{% trans %} Climbing {% endtrans %}</h2>
+          <h3>
+            {% trans %}
+            Climbing school
+            {% endtrans %}
+           </h3>  
+           <p>
+             {% trans %}
+             Beginner or more advanced, the climbing school allows you to develop technics and sensations before
+             going further in altitude or in difficulties...
+             {% endtrans %}
+           </p>
+             <p>
+             {% trans %}
+             You are a beginner or climb in the 6th grade and you dream about the the 7A level ? Don't wait any longer and come to discover every
+             subtleties about climbing with complete confidence !
+             I will teach you many exercises adapted to you level and your background, to begin or really progress in you practice.
+             {% endtrans %}
+          </p>
+
+          <h3>
+            {% trans %}
+              High cliffs
+            {% endtrans %}
+           </h3>  
+           <p>
+            {% trans %}
+               You like thrills and spills ? Climbing a hugh cliff is definitely for you !
+               I will give you the keys to high cliffs initiation or improvements.
+               The cliffs will be chosen regarding your level to make progress in the best possible conditions.
+            {% endtrans %}
+         </p>
         </div>
     </div>
 
@@ -112,9 +205,33 @@
      {# // ski section #}
      <div class="row my-5 main-section">
       <div class="col-4">
-          <h2>{% trans %} Ski {% endtrans %}</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos voluptates provident molestias dolore blanditiis iusto omnis commodi nemo officia. Ratione voluptatem aperiam impedit nobis dicta numquam sequi iste quo fuga.</p>
-      </div>
+          <h2>{% trans %} Ski touring {% endtrans %}</h2>
+          <p>
+            {% trans %} 
+            You are bored about marked ski trails and dream about some escape and new sensations ?
+            {% endtrans %}
+          </p>
+          <p>
+            {% trans %} 
+            The touring ski is an amazing activity combining pleasure with the effort of the ascent,
+            with the happiness of being in the mountain far from crowds et the joys of the 
+            descent in a snow from a movie.
+            {% endtrans %}
+          </p>
+          <p>
+            {% trans %} 
+            Wether you wish to acquire the basics of ski touring, improve your technique to go on raids, or
+            simply being accompanied by a professionnal. You can trust me to find the most adapted itineraries to your skills,
+             your expectations and to the  of the moment. 
+            {% endtrans %}
+          </p>
+
+          <p>
+            {% trans %}
+            Duration: For a day or a severl days raid, for a full dipping in the mountain with night(s) in refuge(s).
+            {% endtrans %}
+          </p>
+        </div>
           <div class="col-8">
             <div id="carouselSki" class="carousel slide carousel-fade" data-ride="carousel">
               <div class="carousel-inner">
@@ -141,9 +258,88 @@
       </div>
 
   <hr>
-      
-    {# // ice climb section #}
+      {# wild ski #}
     <div class="row my-5 main-section main-section-second">
+
+      <div class="col-8">
+        <div id="carouselWildSki" class="carousel slide carousel-fade" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{{asset('images/ski/ski1.jpg')}}" class="d-block w-100" alt="Image">
+            </div>
+            <div class="carousel-item">
+                <img src="{{asset('images/ski/ski2.jpg')}}" class="d-block w-100" alt="Image">
+            </div>
+            <div class="carousel-item">
+                <img src="{{asset('images/ski/ski3.jpg')}}" class="d-block w-100" alt="Image">
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselWildSki" role="button" data-slide="Image">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">{% trans %} Previous {% endtrans %}</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselWildSki" role="button" data-slide="Image">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">{% trans %} Next {% endtrans %}</span>
+          </a>
+      </div>
+    </div>
+
+      <div class="col-4">
+        <h2>{% trans %} Wild skiing {% endtrans %}</h2>
+
+        <p> 
+          {% trans %}
+            You are comfortable on all types of ski trail, you like to play on the edges of ski trails 
+            and want to push it further ?
+          {% endtrans %}
+        </p>
+        <p> 
+          {% trans %}
+            You allready have a first experience in wild skiing and want to ski powder snow? 
+            We'll find together the best itinirary for you: small or big height differences, huge spaces of fresh snow,
+            ski in forests... Trust me to guide you through all kind of field and ride some good puff.
+          {% endtrans %}
+        </p>
+        <p> 
+          {% trans %}
+            Where ? In the best wild spots in the Alps: Chamonix, La Grave, Serre chevalier, Montgenevre ...
+          {% endtrans %}
+        </p>
+    </div>
+  
+  </div>
+
+  <hr>
+
+
+    {# // ice climb section #}
+    <div class="row my-5 main-section">
+    
+      <div class="col-4">
+          <h2>{% trans %} Ice Climbing {% endtrans %}</h2>
+
+          <p>
+            {% trans %}
+              In the heart of winter, the cold caught some ephemeres ice lines.
+            {% endtrans %}
+          </p>
+          <p>
+            {% trans %}
+            For a few weeks a year, the alpinist climber may come to play in this fairy universe.
+            The raw sound of the ice pick biting the ice, le feeling of the spike holding your balance,
+            the ice climbing make you dive into a deep moment of focus.
+            {% endtrans %}
+          </p>
+          <p>
+            {% trans %}
+              Ice climbing is ofter perceived as a tough activity, not accessible... 
+              Try the experience, you will see it's not the case ! For all the winter long, 
+              come discover some fresh new climbing feelings and taste the ice. 
+            {% endtrans %}
+          </p>
+      </div>
+
       <div class="col-8">
         <div id="carouselSki" class="carousel slide carousel-fade" data-ride="carousel">
           <div class="carousel-inner">
@@ -160,13 +356,17 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">{% trans %} Next {% endtrans %}</span>
           </a>
+         
+          <p class='mt-2'>
+            {% trans %}
+            You already have some experience in ice climbing and wish to improve your techniques?
+            Close to home, the Fournel and Fraissinières valleys are the majors spots known internationaly
+            for that activity. We will find together the fitting aims for you.
+            {% endtrans %}
+          </p>
       </div>
     </div>
 
-      <div class="col-4">
-          <h2>{% trans %} Ice Climbing {% endtrans %}</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos voluptates provident molestias dolore blanditiis iusto omnis commodi nemo officia. Ratione voluptatem aperiam impedit nobis dicta numquam sequi iste quo fuga.</p>
-      </div>
   </div>
 
 </main>
