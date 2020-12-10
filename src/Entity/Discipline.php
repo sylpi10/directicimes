@@ -50,16 +50,6 @@ class Discipline
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $infoImage;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $bgImage;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
     private $englishTitle;
 
     /**
@@ -164,29 +154,6 @@ class Discipline
         return $this;
     }
 
-    public function getInfoImage(): ?string
-    {
-        return $this->infoImage;
-    }
-
-    public function setInfoImage(string $infoImage): self
-    {
-        $this->infoImage = $infoImage;
-
-        return $this;
-    }
-
-    public function getBgImage(): ?string
-    {
-        return $this->bgImage;
-    }
-
-    public function setBgImage(string $bgImage): self
-    {
-        $this->bgImage = $bgImage;
-
-        return $this;
-    }
 
     public function getEnglishTitle(): ?string
     {
@@ -258,5 +225,10 @@ class Discipline
         $this->englishPrice = $englishPrice;
 
         return $this;
+    }
+
+    public function __tostring()
+    {
+        return $this->title;
     }
 }

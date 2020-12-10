@@ -105,4 +105,9 @@ class User implements UserInterface
     {
         # code...
     }
+
+    public function __tostring()
+    {
+        return $this->username;
+    }
 }

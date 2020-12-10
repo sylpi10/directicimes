@@ -4,10 +4,12 @@ namespace App\Controller;
 
 use App\Entity\User;
 use App\Entity\Contact;
+use App\Entity\Discipline;
 use App\Form\ContactType;
 use App\Form\RegisterType;
 use Doctrine\ORM\EntityManagerInterface;
 use App\Notification\ContactNotification;
+use App\Repository\DisciplineRepository;
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Mailer\MailerInterface;
@@ -22,11 +24,12 @@ class GlobalController extends AbstractController
     /**
      * @Route("/", name="home")
      */
-    public function index(Request $request, ContactNotification $notification, MailerInterface $mailer, TranslatorInterface $translator) 
+    public function index(Request $request, MailerInterface $mailer, TranslatorInterface $translator, DisciplineRepository $disciplineRepo) 
     {
         //  = new Contact();
         $form = $this->createForm(ContactType::class);
         $contact = $form->handleRequest($request);
+        $disciplines = $disciplineRepo->findAll();
 
         if ($form->isSubmitted() && $form->isValid()) {
 
@@ -51,7 +54,21 @@ class GlobalController extends AbstractController
         }
 
         return $this->render('global/index.html.twig', [
-            'form' => $form->createView()
+            'form' => $form->createView(),
+            "disciplines" => $disciplines
+        ]);
+    }
+
+    /**
+     * @Route("/{id}", name="detail")
+     */
+    public function detail(Discipline $discipline, DisciplineRepository $disciplineRepo)
+    {
+        $disciplines = $disciplineRepo->findAll();
+        return $this->render('disciplines/detail.html.twig', [
+            'discipline' => $discipline,
+            'disciplines' => $disciplines,
+
         ]);
     }
 
@@ -110,4 +127,6 @@ class GlobalController extends AbstractController
         return $this->redirect($request->headers->get('referer'));
         
     }
+
+
 }
