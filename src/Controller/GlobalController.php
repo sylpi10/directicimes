@@ -65,10 +65,11 @@ class GlobalController extends AbstractController
     public function detail(Discipline $discipline, DisciplineRepository $disciplineRepo)
     {
         $disciplines = $disciplineRepo->findAll();
+        $form = $this->createForm(ContactType::class);
         return $this->render('disciplines/detail.html.twig', [
             'discipline' => $discipline,
             'disciplines' => $disciplines,
-
+            'form' => $form->createView(),
         ]);
     }
 

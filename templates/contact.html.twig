@@ -1,17 +1,22 @@
-<h2 class="my-4">Contact</h2>
-
-<div class="index-notif">
+<div class="container .contact-form">
+  <h2 class="my-4 contact-title">Contact</h2>
+  <p>
+    Quelque soit ta demande, je m’engage à te donner une réponse rapide, alors n’hésites pas à me contacter pour discuter de tes envies et construire un projet ensemble. A très vite!
+  </p>
+  <div class="index-notif">
     {% for msg in app.flashes('success') %}
-      <p class="alert-success alert w-50">{{msg}}</p>
+    <p class="alert-success alert w-50">{{msg}}</p>
     {% endfor %}
   </div>
-
+  
   {{form_start(form)}}
   <label class="control-label" for="">{% trans %} Your Name {% endtrans %}</label>
   {{form_row(form.name, {'attr':{'placeholder': 'ex:Mike Horn'}})}}
   <label class="control-label" for="">{% trans %} Your Email {% endtrans %}</label>
   {{form_row(form.email, {'attr':{'placeholder': 'mail@gmail.com'}})}}
   <label class="control-label" for="">{% trans %} Your Message {% endtrans %}</label>
-    {{form_row(form.message)}}
-    <input type="submit" value="{% trans %} Send {% endtrans %}" class="btn button-link">
+  {{form_row(form.message)}}
+  <input type="submit" value="{% trans %} Send {% endtrans %}" class="btn button-link">
   {{form_end(form)}}
+  
+</div>

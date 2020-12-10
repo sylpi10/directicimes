@@ -11,7 +11,7 @@
 
 <div class="slider-wrapper">    
 
-   <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+   <div id="carouselExampleControls" class="carousel carousel-fade slide" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active carousel1">
       </div>
@@ -45,8 +45,16 @@
     <div class="disciplines-list container">
       {% for disci in disciplines %}
         <a href="{{ path('detail', {'id': disci.id}) }}" class="discipline">
-          <div class="text" style="background: url('/images/{{disci|replace({" " : "-"})|lower}}.jpg') center no-repeat;background-size: cover;">
-              <h3>{{disci.title}}</h3>
+          <div class="text" style="background:url('/images/{{disci|replace({" ":"-"})|lower}}.jpg') center no-repeat;background-size:cover;">
+            {% for locale in locales %}
+            {% if locale == app.request.locale %} 
+            {% if locale =='fr' %}
+            <h3>{{disci.title}}</h3>
+            {% else %}
+            <h3>{{disci.englishTitle}}</h3>
+              {% endif %}
+              {% endif %}
+              {% endfor %}
           </div>
         </a>
       {% endfor %}
@@ -56,12 +64,13 @@
 
 <hr>
 
-<div class="contact container my-5" id="contact-form">
+<div class="contact" id="contact-form">
   {% include "contact.html.twig" %}
+
+  <footer class="footer mt-5">
+    <h5 class="text-light p-5">footer</h5>
+  </footer>
 </div>
 
-<div class="footer mt-5 bg-dark">
-  <h5 class="text-light p-5">footer</h5>
-</div>
 
 {% endblock %}

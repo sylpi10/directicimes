@@ -4,7 +4,8 @@
 
 {% block body %}
 
-    <main class="container about-container">
+    <main class="main-about">
+        <div class="container about-container">
             <div class="about-me row">
 
                 <div class="about-text col-6">
@@ -58,11 +59,14 @@
             </div>
             
         </main>
-        <hr class="my-5 w-50 mx-auto">
+    </div>
 
-
-    <div class="contact container my-5" id="contact-form">
-        {% include "contact.html.twig" %}
-      </div>
+        <div class="contact" id="contact">
+            {% include "contact.html.twig" %}
+          
+            <footer class="footer mt-5">
+              <h5 class="text-light p-5">footer</h5>
+            </footer>
+          </div>
 
 {% endblock %}

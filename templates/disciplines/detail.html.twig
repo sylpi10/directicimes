@@ -79,19 +79,37 @@
    {% endif %}
 {% endfor %}
    </main>
-<div class=" list-details">
+<div class="list-details">
 
-    <div class="disciplines-list container">
+    <div class="disciplines-list">
+        
+
         {% for disci in disciplines %}
-            {% if disci.id != discipline.id %}
-            <a href="{{ path('detail', {'id': disci.id}) }}" class="discipline">
-                <div class="text" style="background: url('/images/{{disci|replace({" " : "-"})|lower}}.jpg') center no-repeat;background-size: cover;">
-                    <h3>{{disci.title}}</h3>
-                </div>
-            </a>
-            {% endif %}
-        {% endfor %}
+        {% if disci.id != discipline.id %}
+        <a href="{{ path('detail', {'id': disci.id}) }}" class="discipline">
+          <div class="text" style="background:url('/images/{{disci|replace({" ":"-"})|lower}}.jpg') center no-repeat;background-size:cover;">
+            {% for locale in locales %}
+                {% if locale == app.request.locale %} 
+                    {% if locale =='fr' %}
+                        <h3>{{disci.title}}</h3>
+                    {% else %}
+                        <h3>{{disci.englishTitle}}</h3>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+          </div>
+        </a>
+        {% endif %}
+      {% endfor %}
 
       </div>
 </div>
+
+<div class="contact" id="contact">
+    {% include "contact.html.twig" %}
+  
+    <footer class="footer mt-5">
+      <h5 class="text-light p-5">footer</h5>
+    </footer>
+  </div>
 {% endblock %}
