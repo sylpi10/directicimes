@@ -4,27 +4,30 @@ namespace App\Controller;
 
 use App\Entity\User;
 use App\Entity\Contact;
-use App\Entity\Discipline;
 use App\Form\ContactType;
+use App\Entity\Discipline;
 use App\Form\RegisterType;
+use App\Repository\DisciplineRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use App\Notification\ContactNotification;
-use App\Repository\DisciplineRepository;
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Mailer\MailerInterface;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Contracts\Translation\TranslatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
-use Symfony\Contracts\Translation\TranslatorInterface;
 
 class GlobalController extends AbstractController
 {
     /**
      * @Route("/", name="home")
      */
-    public function index(Request $request, MailerInterface $mailer, TranslatorInterface $translator, DisciplineRepository $disciplineRepo) 
+    public function index(Request $request, 
+    MailerInterface $mailer, TranslatorInterface $translator, 
+    DisciplineRepository $disciplineRepo) 
     {
         //  = new Contact();
         $form = $this->createForm(ContactType::class);
@@ -35,8 +38,8 @@ class GlobalController extends AbstractController
 
             $email = (new TemplatedEmail())
                     ->from($contact->get('email')->getData())
-                    ->to("georgesyn@gmail.com")
-                    // ->to("syl.pillet@hotmail.fr")
+                    // ->to("georgesyn@gmail.com")
+                    ->to("syl.pillet@hotmail.fr")
                     ->subject("Nouveau Message depuis DirectiCimes")
                     // ->htmlTemplate("global/index.html.twig")
                     ->text($contact->get('message')->getData())
@@ -60,12 +63,45 @@ class GlobalController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="detail")
+     * @Route("discipline/{id}", name="detail")
      */
-    public function detail(Discipline $discipline, DisciplineRepository $disciplineRepo)
+    public function detail($id, DisciplineRepository $disciplineRepo, 
+    MailerInterface $mailer, 
+    TranslatorInterface $translator,
+    Request $request): Response
     {
         $disciplines = $disciplineRepo->findAll();
+        $discipline = $disciplineRepo->findOneById($id);
         $form = $this->createForm(ContactType::class);
+
+        $contact = $form->handleRequest($request);
+        $disciplines = $disciplineRepo->findAll();
+
+        if ($form->isSubmitted() && $form->isValid()) {
+
+            $email = (new TemplatedEmail())
+                    ->from($contact->get('email')->getData())
+                    // ->to("georgesyn@gmail.com")
+                    ->to("syl.pillet@hotmail.fr")
+                    ->subject("Nouveau Message depuis DirectiCimes")
+                    // ->htmlTemplate("global/index.html.twig")
+                    ->text($contact->get('message')->getData())
+                    ->context([
+                        "form" => $form->createView()
+                    ]);
+
+                    $mailer->send($email);
+
+            // $notification->notify($contact);
+            $message = $translator->trans("Your email has been send");
+
+            $this->addFlash('success', $message);
+            return $this->redirectToRoute("detail", [
+                'id' => $id
+            ]);
+        }
+
+
         return $this->render('disciplines/detail.html.twig', [
             'discipline' => $discipline,
             'disciplines' => $disciplines,

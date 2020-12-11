@@ -64,3 +64,9 @@ DirectoryIndex index.php
         # RedirectTemp cannot be used instead
     </IfModule>
 </IfModule>
+
+#<IfModule mod_rewrite.c>
+ #   RewriteEngine On
+  #  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  #  RewriteRule (.*) https://%{HTTP_HOST}/$1 [R=301,L]
+#</IfModule>

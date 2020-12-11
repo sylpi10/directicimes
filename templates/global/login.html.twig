@@ -4,7 +4,7 @@
 {% block pageTitle %}Login{% endblock %}
 {% block body %}
 
-    <div class="container mt-5 pt-5">
+    <div class="container bg-light mt-5 p-5">
 
         
         {% if error %}
@@ -15,7 +15,7 @@
         
         <form action="{{path('login')}}" method="post">
             <div class="form-group">
-                <label for="_username">Login :</label>
+                <label for="_username">Name :</label>
                 <input type="text" required name="_username" class="form-control" value="{{lastUserName}}">
             </div>
             

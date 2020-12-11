@@ -10,7 +10,6 @@
        <div class="container-fluid">
            <div class="text-wrapper">
                <div class="text">
-
             
                 {% if locale =='fr' %}
                 <h2>{{discipline.title}}</h2>
@@ -82,7 +81,6 @@
 <div class="list-details">
 
     <div class="disciplines-list">
-        
 
         {% for disci in disciplines %}
         {% if disci.id != discipline.id %}
@@ -93,7 +91,7 @@
                     {% if locale =='fr' %}
                         <h3>{{disci.title}}</h3>
                     {% else %}
-                        <h3>{{disci.englishTitle}}</h3>
+                    <h3>{{disci.englishTitle}}</h3>
                     {% endif %}
                 {% endif %}
             {% endfor %}
@@ -107,9 +105,5 @@
 
 <div class="contact" id="contact">
     {% include "contact.html.twig" %}
-  
-    <footer class="footer mt-5">
-      <h5 class="text-light p-5">footer</h5>
-    </footer>
   </div>
 {% endblock %}

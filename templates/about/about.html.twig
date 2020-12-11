@@ -6,9 +6,9 @@
 
     <main class="main-about">
         <div class="container about-container">
-            <div class="about-me row">
+            <div class="about-me">
 
-                <div class="about-text col-6">
+                <div class="about-text">
                     <h1>{% trans %} Who Am-I ? {% endtrans %}</h1>
                     <p> 
                     {% trans %}
@@ -28,17 +28,17 @@
                 
             </div>
             <div class="about-pic">
-                <img src="{{asset('images/about-me.jpg')}}" alt="Person picture" class="img-fluid" width="500">
+                <img src="{{asset('images/about-me.jpg')}}" alt="Person picture" class="img-fluid shadow" width="500">
             </div>
         </div>
 
             <hr class="m-5">
             
-            <div class="about-me row">
+            <div class="about-me">
                 <div class="about-pic">
-                    <img src="{{asset('images/about-me3.jpg')}}" alt="Person picture" class="img-fluid" width="500">
+                    <img src="{{asset('images/about-me3.jpg')}}" alt="Person picture" class="img-fluid shadow" width="500">
                 </div>
-            <div class="about-text col-6">
+            <div class="about-text">
                 <h2>{% trans %}Why engage a mountain guide ?{% endtrans %}</h2>
                 <p> 
                 {% trans %}
@@ -63,10 +63,6 @@
 
         <div class="contact" id="contact">
             {% include "contact.html.twig" %}
-          
-            <footer class="footer mt-5">
-              <h5 class="text-light p-5">footer</h5>
-            </footer>
-          </div>
+        </div>
 
 {% endblock %}
