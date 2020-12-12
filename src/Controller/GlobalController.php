@@ -38,8 +38,8 @@ class GlobalController extends AbstractController
 
             $email = (new TemplatedEmail())
                     ->from($contact->get('email')->getData())
-                    // ->to("georgesyn@gmail.com")
-                    ->to("syl.pillet@hotmail.fr")
+                    ->to("georgesyn@gmail.com")
+                    // ->to("syl.pillet@hotmail.fr")
                     ->subject("Nouveau Message depuis DirectiCimes")
                     // ->htmlTemplate("global/index.html.twig")
                     ->text($contact->get('message')->getData())
@@ -81,8 +81,8 @@ class GlobalController extends AbstractController
 
             $email = (new TemplatedEmail())
                     ->from($contact->get('email')->getData())
-                    // ->to("georgesyn@gmail.com")
-                    ->to("syl.pillet@hotmail.fr")
+                    ->to("georgesyn@gmail.com")
+                    // ->to("syl.pillet@hotmail.fr")
                     ->subject("Nouveau Message depuis DirectiCimes")
                     // ->htmlTemplate("global/index.html.twig")
                     ->text($contact->get('message')->getData())
