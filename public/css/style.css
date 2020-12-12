@@ -329,6 +329,7 @@ h2{
     color:#fff;
     font-size: 3rem;
     z-index: 800;
+    padding-top: 80px;
 }
 .disciplines>.container-fluid .text-wrapper{
     width: 78%;
@@ -500,22 +501,12 @@ h2{
         font-size: 1.1rem;
         margin-top: 480px;
     }
-    .escalade>.container-fluid .text-wrapper .text{
-        width: 100%;
-        font-size: 1.1rem;
-    }
 
     .disciplines>.container-fluid h2{
         margin-top: -20px;
         margin-bottom: 30px;
+        padding-top: 20px;
     }
-    /* .escalade>.container-fluid h2{
-        margin-top: 0px;
-    }
-    .cascade-de-glace>.container-fluid h2{
-        margin-top: 0;
-        margin-bottom: 20px;
-    } */
 
     .info-details{
         position: relative;
@@ -532,21 +523,14 @@ h2{
 }
 
 @media screen and (max-width: 560px) {
+    .disciplines>.container-fluid .text-wrapper{
+        padding: 0;
+    }
     .disciplines>.container-fluid .text-wrapper .text{
         width: 100%;
         font-size: 1.1rem;
-        margin-top: 290px;
+        margin-top: 260px;
     }
-    /* .disciplines>.container-fluid h2{
-        margin-top: -0px;
-    } */
-    /* .cascade-de-glace>.container-fluid h2{
-        margin-top: 0;
-        margin-top: -20px;
-    }
-    .escalade>.container-fluid h2{
-        margin-top: 30px;
-    } */
 }
 
 hr{
@@ -623,6 +607,7 @@ hr{
     }
     .contact-infos p {
         min-width: 280px;
+        font-size: 1rem;
     }
 }
 .footer{
