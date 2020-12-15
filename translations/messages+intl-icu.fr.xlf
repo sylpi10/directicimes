@@ -101,12 +101,14 @@
                     for the Alpine club, the willing of becoming a moutain guide was born, to transmit this passion ! 
                     This is what I do enthusiastically since last summer, I can accompany you in your mountain 
                     projects, guide you safely and share all these nice emotions up there !</source>
-        <target>Originaire des Yvelines en région Parisienne, j’ai rencontré la montagne sur le tard.
-                    J’ai d'abord flirté, le temps de week ends, pour m’échapper de la ville.
-                    La montagne était pour moi un lieu d'insouciance où je pouvais me laisser aller , entièrement concentré sur ce que je faisais, sans me préoccuper du reste. Je me sentais bien, pour mieux revenir dans le monde d’en bas. 
-                    Mes terrains de jeu favoris étaient Chamonix et les Ecrins, mon massif de cœur, près duquel je vis aujourd'hui. 
-                    J’ai vite attrapé le virus et de mes premières sorties en amateurs, en passant par l’encadrement de groupes pour le Club Alpin, l'envie de devenir guide est née, pour transmettre cette passion. 
-                    C’est ce que je fais avec bonheur depuis cet été, je peux vous accompagner dans vos projets en montagne, vous guider en sécurité et partager toutes ces belles émotions qu’on peut vivre la haut.</target>
+        <target>
+                Originaire des Yvelines en région Parisienne, je me suis pris de passion pour la montagne et cet univers qui ne m'étais à priori pas prédestiné est vite devenu une évidence.
+                J’ai d'abord flirté, le temps de week ends, pour m’échapper de la ville.
+                La montagne était pour moi un lieu d'insouciance où je pouvais me laisser aller , entièrement concentré sur ce que je faisais, sans me préoccuper du reste. Je me sentais bien et cette bouffée d'oxygène me permettait de mieux revenir dans le monde d'en bas. 
+                Mes terrains de jeu favoris étaient Chamonix et les Ecrins, mon massif de cœur, près duquel je vis aujourd'hui. 
+                J’ai vite attrapé le virus et de mes premières sorties en amateurs, en passant par l’encadrement de groupes pour le Club Alpin, l'envie de devenir guide est née, pour transmettre cette passion. 
+                C’est ce que je fais avec bonheur depuis que je suis aspirant guide, je peux vous accompagner dans vos projets en montagne, vous guider en sécurité et partager toutes ces belles émotions qu’on peut vivre la haut.    
+        </target>
       </trans-unit>
       <trans-unit id="5X804Ud" resname="Doing a trip in the mountain, it's living a summary of thrills and spills in a few days:&#10;                    joy, fear, tiredness, exhilaration in front of this universe's fascinating beauty...&#10;&#10;                    It' s also the creation of a unique relation around the rope, where the guide is sesponsible&#10;                    for your life, where social veneer vanished behind the risk effects, &#10;                    the tiredness and the high altitude...&#10;&#10;                    However the mountain holds its risks and may fastly become wild.&#10;                    &#10;                    With a guide, you will learn to evolve safely in this environment and everybody will &#10;                    come back below alive and with the smile !">
         <source>Doing a trip in the mountain, it's living a summary of thrills and spills in a few days:
@@ -119,7 +121,7 @@
                     However the mountain holds its risks and may fastly become wild.
                     
                     With a guide, you will learn to evolve safely in this environment and everybody will 
-                    come back below alive and with the smile !</source>
+                    come back below safe and smiling !</source>
         <target>   Faire une course en montagne, c’est vivre en quelques jours un condensé de sensations:
                      joie, peur, fatigue, exaltation devant la beauté d’un univers fascinant…
                     C’est aussi nouer une relation unique, celle de la cordée où le guide est responsable 
@@ -128,7 +130,7 @@
                     Cependant la montagne comporte des risques et peut en quelques minutes devenir hostile.
         
                     Accompagné d’un guide vous apprendrez à évoluer dans cet environnement en sécurité et 
-                    tout le monde redescendra en bas, en vie, et avec le sourire! </target>
+                    tout le monde redescendra avec le sourire! </target>
       </trans-unit>
       <trans-unit id="swKcFmp" resname="You've never set foot on a glacier or in high mountain et you wish to discover the basics of alpinism ?">
         <source>You've never set foot on a glacier or in high mountain et you wish to discover the basics of alpinism ?</source>
