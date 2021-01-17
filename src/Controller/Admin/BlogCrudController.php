@@ -14,18 +14,17 @@ class BlogCrudController extends AbstractCrudController
     {
         return Blog::class;
     }
-   
+
     public function configureFields(string $pageName): iterable
     {
         return [
             TextField::new('title'),
             TextEditorField::new('content'),
             ImageField::new('image1')
-            ->setBasePath('uploads/')
-            ->setUploadDir('public/uploads')
-            ->setUploadedFileNamePattern('[randomhash].[extension]')
-            ->setRequired(false)
+                ->setBasePath('uploads/')
+                ->setUploadDir('public/uploads')
+                ->setUploadedFileNamePattern('[randomhash].[extension]')
+                ->setRequired(false)
         ];
     }
-   
 }
