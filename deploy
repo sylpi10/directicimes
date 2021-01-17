@@ -1,4 +1,0 @@
-#!/bin/sh
-rsync -av ./ sylpi@directicimes.com:~/directicimes.com --include=public/build --exclude-from=.gitignore
-# --include=public/.htaccess  
-# --include=vendor --exclude=".*"
